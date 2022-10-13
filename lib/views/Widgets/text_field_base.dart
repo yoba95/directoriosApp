@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class TextFieldBase extends StatelessWidget {
   String name;
   IconData? icon;
   bool obscureText;
   TextEditingController controller = TextEditingController();
-  TextFieldBase(this.name, this.controller,
-      {this.obscureText = false, this.icon});
+  TextFieldBase(
+    this.name,
+    this.controller, {
+    super.key,
+    this.obscureText = false,
+    this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +25,12 @@ class TextFieldBase extends StatelessWidget {
           color: Colors.white,
           boxShadow: [BoxShadow(color: Colors.black, blurRadius: 5)]),
       child: TextField(
-        controller: this.controller,
+        controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
-            icon:
-                this.icon != null ? Icon(this.icon, color: Colors.green) : null,
+            icon: this.icon != null
+                ? Icon(this.icon, color: Colors.green[900])
+                : null,
             hintText: this.name,
             border: InputBorder.none),
       ),

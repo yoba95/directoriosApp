@@ -4,28 +4,25 @@ import 'package:flutter/material.dart';
 class BarGradient extends StatelessWidget {
   String name;
   IconData icon;
-
   BarGradient(this.name, this.icon);
-
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Container(
-      margin: EdgeInsets.only(
-        bottom: 30.0,
-      ),
+      margin: EdgeInsets.only(bottom: 30.0),
       height: 220,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.centerRight,
               end: Alignment.topLeft,
               colors: [
-                Color.fromARGB(255, 38, 113, 41),
-                Colors.green.withOpacity(0.45)
+                Colors.green.shade900,
+                Colors.green.shade900.withOpacity(0.45)
               ]),
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90))),
       child: Column(
         children: [
-          //Spacer(),
+          Spacer(),
           Align(
             alignment: Alignment.center,
             child: Icon(
@@ -34,7 +31,7 @@ class BarGradient extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          // Spacer(),
+          Spacer(),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
@@ -42,7 +39,7 @@ class BarGradient extends StatelessWidget {
               child: Text(
                 this.name,
                 style: TextStyle(
-                    color: Colors.white, fontSize: 25, letterSpacing: 5),
+                    color: Colors.white, fontSize: 25, letterSpacing: 10),
               ),
             ),
           )

@@ -4,11 +4,11 @@ class ButtonBase extends StatelessWidget {
   String name;
   var onTap;
   double width;
-
   ButtonBase(this.name, this.onTap, {this.width = 0});
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Padding(
       padding: EdgeInsets.all(30.0),
       child: InkWell(
@@ -21,10 +21,12 @@ class ButtonBase extends StatelessWidget {
               color: Colors.green[900],
               borderRadius: BorderRadius.all(Radius.circular(50))),
           child: Center(
-              child: Text(
-            this.name.toUpperCase(),
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          )),
+            child: Text(
+              this.name.toUpperCase(),
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
         ),
       ),
     );

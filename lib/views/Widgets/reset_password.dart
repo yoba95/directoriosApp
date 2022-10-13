@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 class ResetPassword extends StatelessWidget {
   TextEditingController ctrEmail = TextEditingController();
 
-  //ResetPassword({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Dialog(
