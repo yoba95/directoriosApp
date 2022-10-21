@@ -24,8 +24,14 @@ class LoginPage extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(children: [
         BarGradient("Directorios Escolares De Educación Básica", Icons.school),
+        /* Padding(
+          padding: EdgeInsets.only(left: 20.0),
+          child: Text(
+            "LOGIN",
+          ),
+        ),*/
         TextFieldBase(
-          "Usuario",
+          "Correo Electronico",
           ctrlEmail,
           icon: Icons.person,
         ),
@@ -35,17 +41,6 @@ class LoginPage extends StatelessWidget {
           icon: Icons.remove_red_eye,
           obscureText: true,
         ),
-        /* TextFieldBase(
-          "Email",
-          ctrlEmail,
-          icon: Icons.person,
-        ),
-        TextFieldBase(
-          "Password",
-          ctrlPassword,
-          icon: Icons.remove_red_eye,
-          obscureText: true,
-        ),*/
         InkWell(
           child: Align(
               alignment: Alignment.centerRight,
@@ -77,10 +72,10 @@ class LoginPage extends StatelessWidget {
   }
 
   login(BuildContext context) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBarApp(
-        TextMessage("Email o contraseña incorrecta. Intente de nuevo")));
+    //ScaffoldMessenger.of(context).showSnackBar(SnackBarApp(
+    //  TextMessage("Email o contraseña incorrecta. Intente de nuevo")));
     //showProgress(context);
-    //TransitionApp.openPage(HomePage(), context);
+    TransitionApp.openPage(HomePage(), context);
     //TransitionApp.openPage(LoginPage(), context);
   }
 

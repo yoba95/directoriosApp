@@ -23,9 +23,9 @@ class SignUpPage extends StatelessWidget {
             TextFieldBase("Nombre Completo", ctrlFullName),
             TextFieldBase("Telefono", ctrlPhone),
             TextFieldBase("Nombre De La Oficina", ctrlOficina),
-            TextFieldBase("Nombre de Usuario", ctrlUserName),
-            TextFieldBase("Email", ctrlEmail),
-            TextFieldBase("Password", ctrlPassword),
+            TextFieldBase("Nombre De Usuario", ctrlUserName),
+            TextFieldBase("Correo Electronico", ctrlEmail),
+            TextFieldBase("Contraseña", ctrlPassword),
             ButtonBase("Crear Cuenta", () => signUp()),
             InkWell(
               child: Row(
